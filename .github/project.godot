@@ -10,11 +10,6 @@ config_version=5
 
 [application]
 
-config/name="Godot trials"
-run/main_scene="res://node.tscn"
+config/name="3D Vinnies Game delivery project"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[physics]
-
-2d/default_gravity=979.315
