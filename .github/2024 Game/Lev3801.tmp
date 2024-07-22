@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bttf745p43ddg"]
 
 [ext_resource type="Texture2D" uid="uid://020iu2x133f3" path="res://textures/696.jpg" id="1_io8gm"]
-[ext_resource type="Texture2D" uid="uid://bjftbo8uu2n0n" path="res://kloofendal_48d_partly_cloudy_puresky_4k.exr" id="1_ktx0f"]
-[ext_resource type="PackedScene" uid="uid://ca3gjx4g4wk52" path="res://Van/root_scene.tscn" id="5_gt4se"]
+[ext_resource type="Texture2D" uid="uid://bjftbo8uu2n0n" path="res://textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="1_ktx0f"]
+[ext_resource type="PackedScene" uid="uid://b8ngb3f0iwk0w" path="res://New Van/Trial.tscn" id="1_qnbia"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kja3e"]
 albedo_texture = ExtResource("1_io8gm")
@@ -23,8 +23,7 @@ glow_enabled = true
 
 [node name="World" type="Node3D"]
 
-[node name="Van" parent="." instance=ExtResource("5_gt4se")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1921, 0.27701, 0.115892)
+[node name="van" parent="." instance=ExtResource("1_qnbia")]
 
 [node name="Stage" type="Node3D" parent="."]
 
@@ -41,4 +40,5 @@ environment = SubResource("Environment_xwjkv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 87.8154, 40.3533, -156.344)
+visible = false
 shadow_enabled = true
