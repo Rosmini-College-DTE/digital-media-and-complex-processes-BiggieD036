@@ -182,51 +182,61 @@ points = PackedVector3Array(0.75, 0.699883, 0.522661, 0.75, 0.499961, 0.522661, 
 
 [node name="van" type="VehicleBody3D"]
 gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.5, 0.1)
 script = ExtResource("1_xvshf")
 
 [node name="Back left" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, -0.76)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499751, 0.3, -0.76)
 use_as_traction = true
-wheel_roll_influence = 10.0
-wheel_friction_slip = 20.0
+wheel_roll_influence = 0.5
+wheel_radius = 0.32
+wheel_friction_slip = 1.4
 suspension_travel = 0.1
 suspension_stiffness = 80.0
 
 [node name="wheel-back-left" type="MeshInstance3D" parent="Back left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199751, 0, 0)
 mesh = SubResource("ArrayMesh_83hr7")
 skeleton = NodePath("")
 
 [node name="Back right" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, -0.76)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505552, 0.3, -0.76)
 use_as_traction = true
-wheel_roll_influence = 10.0
-wheel_friction_slip = 20.0
+wheel_roll_influence = 0.5
+wheel_radius = 0.32
+wheel_friction_slip = 1.4
 suspension_travel = 0.1
 suspension_stiffness = 80.0
 
 [node name="wheel-back-right" type="MeshInstance3D" parent="Back right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205552, 0, 0)
 mesh = SubResource("ArrayMesh_xbbxr")
 skeleton = NodePath("")
 
 [node name="Front left" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.3, 0.76)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499382, 0.3, 0.76)
 use_as_steering = true
-wheel_roll_influence = 0.7
-wheel_friction_slip = 20.2
+wheel_roll_influence = 0.5
+wheel_radius = 0.32
+wheel_friction_slip = 1.1
 suspension_stiffness = 120.0
 
 [node name="wheel-front-left" type="MeshInstance3D" parent="Front left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199382, 0, 0)
 mesh = SubResource("ArrayMesh_ntdp6")
 skeleton = NodePath("")
 
 [node name="Front right" type="VehicleWheel3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0.76)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501373, 0.3, 0.76)
 use_as_steering = true
-wheel_roll_influence = 0.7
-wheel_friction_slip = 20.2
+wheel_roll_influence = 0.5
+wheel_radius = 0.32
+wheel_friction_slip = 1.1
 suspension_stiffness = 120.0
 
 [node name="wheel-front-right" type="MeshInstance3D" parent="Front right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201373, 0, 0)
 mesh = SubResource("ArrayMesh_abjbm")
 skeleton = NodePath("")
 
@@ -237,10 +247,11 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+visible = false
 shape = SubResource("ConvexPolygonShape3D_leyfy")
 
 [node name="Center of Mass" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.1696)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0499266, 0.544377, -0.1696)
 
 [node name="CameraPivot" type="Node3D" parent="."]
 top_level = true
