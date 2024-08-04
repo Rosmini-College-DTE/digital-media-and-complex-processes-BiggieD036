@@ -1,6 +1,6 @@
 extends VehicleBody3D
 
-const MAX_STEER = 0.5
+const MAX_STEER = 0.35
 const ENGINE_POWER = 50
 
 @onready var camera_pivot = $CameraPivot

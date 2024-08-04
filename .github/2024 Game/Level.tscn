@@ -25,14 +25,14 @@ glow_enabled = true
 [node name="World" type="Node3D"]
 
 [node name="van" parent="." instance=ExtResource("1_qnbia")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0733519, 0, -1.31332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0733519, 0, -5.17589)
 
 [node name="Stage" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9105, -0.5, 78.0845)
 use_collision = true
-size = Vector3(500, 1, 500)
+size = Vector3(276.616, 1, 253.994)
 material = SubResource("StandardMaterial3D_kja3e")
 
 [node name="Enviroment" type="Node3D" parent="."]
