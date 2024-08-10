@@ -1,7 +1,8 @@
 extends VehicleBody3D
 
 const MAX_STEER = 0.35
-const ENGINE_POWER = 50
+const ENGINE_POWER = 40
+
 
 @onready var camera_pivot = $CameraPivot
 @onready var camera_3d = $CameraPivot/Camera3D
@@ -10,7 +11,6 @@ var look_at
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	look_at = global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

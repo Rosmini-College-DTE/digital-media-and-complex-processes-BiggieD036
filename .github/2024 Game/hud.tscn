@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d33mmun03hy7g"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_7w1aa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v6r1h"]
+font_size = 36
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_7w1aa")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 592.0
+offset_right = 352.0
+offset_bottom = 642.0
+text = "Packages Delivered:"
+label_settings = SubResource("LabelSettings_v6r1h")

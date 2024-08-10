@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8ngb3f0iwk0w"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ngb3f0iwk0w"]
 
 [ext_resource type="Script" path="res://New Van/Trial.gd" id="1_xvshf"]
 
@@ -40,6 +40,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tug77")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23yhh"]
+albedo_color = Color(0.769771, 0.840134, 0.990495, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5jrli"]
 _surfaces = [{
@@ -177,6 +180,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ja2pq")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dcwv"]
+render_priority = 1
+albedo_color = Color(0.235294, 0.486275, 1, 1)
+uv2_scale = Vector3(70, 70, 70)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_leyfy"]
 points = PackedVector3Array(0.75, 0.699883, 0.522661, 0.75, 0.499961, 0.522661, 0.75, 0.699883, 0.422793, 0.449883, 1.09996, 0.549848, 0.549873, 0.512412, 1.09979, 0.549873, 0.448395, 1.14986, 0.620644, 0.199961, 1.17059, 0.649863, 0.199961, 1.09979, 0.75, 0.499961, 0.422793, 0.649863, -7.83131e-05, 1.09979, 0.649863, 0.199961, -1.35006, 0.649863, 0.375685, -1.13606, 0.649863, 0.437706, -1.05504, 0.449883, 1.09996, -1.2502, 0.299677, 1.15, 0.361957, -0.450029, 1.09996, 0.549848, -0.550166, 0.512412, 1.09979, -0.550166, 0.448395, 1.14986, 0.124951, 0.124902, 1.25, 0.549873, 0.199961, 1.19993, 0.620644, -7.83131e-05, 1.17059, 0.649863, -7.83131e-05, -1.35006, 0.124951, -0.05, 1.25, 0.620644, 0.199961, -1.42086, 0.549873, 0.599922, -1.4502, -0.450029, 1.09996, -1.2502, 0.299677, 1.15, -1.0623, -0.299824, 1.15, 0.361957, -0.75, 0.699883, 0.522661, -0.620791, 0.199961, 1.17059, -0.550166, 0.199961, 1.19993, -0.125098, 0.124902, 1.25, 0.174873, 0.0749804, 1.25, 0.549873, -7.83131e-05, 1.19993, 0.124951, -0.05, -1.5, 0.620644, -7.83131e-05, -1.42086, 0.174873, -7.83131e-05, 1.25, -0.125098, -0.05, 1.25, 0.549873, -7.83131e-05, -1.4502, 0.174873, 0.0749804, -1.5, 0.124951, 0.124902, -1.5, -0.550166, 0.599922, -1.4502, -0.299824, 1.15, -1.0623, -0.65001, 0.437706, -1.05504, -0.75, 0.699883, 0.422793, -0.65001, 0.199961, 1.09979, -0.75, 0.499961, 0.522661, -0.620791, -7.83131e-05, 1.17059, -0.550166, -7.83131e-05, 1.19993, -0.17502, 0.0749804, 1.25, -0.125098, -0.05, -1.5, 0.174873, -7.83131e-05, -1.5, -0.17502, -7.83131e-05, 1.25, -0.65001, -7.83131e-05, 1.09979, -0.125098, 0.124902, -1.5, -0.620791, 0.199961, -1.42086, -0.65001, 0.199961, -1.35006, -0.65001, 0.375685, -1.13606, -0.17502, 0.0749804, -1.5, -0.550166, -7.83131e-05, -1.4502, -0.75, 0.499961, 0.422793, -0.65001, -7.83131e-05, -1.35006, -0.620791, -7.83131e-05, -1.42086, -0.17502, -7.83131e-05, -1.5)
 
@@ -200,6 +208,7 @@ damping_compression = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199751, 0, 0)
 mesh = SubResource("ArrayMesh_83hr7")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_23yhh")
 
 [node name="Back right" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505552, 0.3, -0.76)
@@ -215,6 +224,7 @@ damping_compression = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205552, 0, 0)
 mesh = SubResource("ArrayMesh_xbbxr")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_23yhh")
 
 [node name="Front left" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499382, 0.3, 0.76)
@@ -229,6 +239,7 @@ damping_compression = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199382, 0, 0)
 mesh = SubResource("ArrayMesh_ntdp6")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_23yhh")
 
 [node name="Front right" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501373, 0.3, 0.76)
@@ -243,11 +254,13 @@ damping_compression = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201373, 0, 0)
 mesh = SubResource("ArrayMesh_abjbm")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_23yhh")
 
 [node name="body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
 mesh = SubResource("ArrayMesh_rsjl3")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_7dcwv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
