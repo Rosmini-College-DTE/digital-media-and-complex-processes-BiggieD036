@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://c27h2c3h0phgg"]
 
 [ext_resource type="Script" path="res://Package.gd" id="1_kn0tc"]
-[ext_resource type="AudioStream" uid="uid://cbc8sw50abjxg" path="res://package/collect-points-190037.mp3" id="2_845b4"]
+[ext_resource type="AudioStream" uid="uid://cbc8sw50abjxg" path="res://package/collect-points-190037.mp3" id="2_t2go2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjfl0"]
 resource_name = "colormap"
@@ -227,7 +227,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00602663, 0, 0.0594246)
 shape = SubResource("ConvexPolygonShape3D_nbmnl")
 
 [node name="Coinsound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_845b4")
+stream = ExtResource("2_t2go2")
+volume_db = -12.381
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="Coinsound" to="." method="_on_coinsound_finished"]
