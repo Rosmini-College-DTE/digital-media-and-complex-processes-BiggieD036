@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw2vtxfeuyiim"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_bt07v"]
+[ext_resource type="Shader" path="res://pause_menu.gdshader" id="2_drc7m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_im2wk"]
+shader = ExtResource("2_drc7m")
+shader_parameter/amount = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85ie3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.207843)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Pause Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -834.0
+offset_bottom = -491.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bt07v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_im2wk")
+layout_mode = 0
+offset_left = -1412.0
+offset_top = -610.0
+offset_right = 2410.0
+offset_bottom = 2035.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 316.0
+offset_bottom = 151.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_85ie3")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_85ie3")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

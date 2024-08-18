@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjqt8a2owixfh"]
+
+[ext_resource type="Script" path="res://Controls.gd" id="1_fi0yd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnfq4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.207843)
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Controls" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1149.0
+offset_bottom = 266.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Use the arrow keys or WASD to move the van. Your aim is to deliver as many
+packages as you can to the needy families in the time frame of 70 seconds. 
+Packages can be delivered by driving the van into the food packagegs around 
+the map. There is an Indicator on the left let you know how many packages 
+you have delivered along with the time you have left at the bottom right of the 
+screen. Follow the road to the very end of the town to complete the delivery"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.511
+anchor_right = 0.5
+anchor_bottom = 0.511
+offset_left = -195.0
+offset_top = 63.872
+offset_right = 202.0
+offset_bottom = 145.872
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fi0yd")
+
+[node name="Return" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_cnfq4")
+text = "Return to menu"
+
+[connection signal="pressed" from="VBoxContainer/Return" to="VBoxContainer" method="_on_return_pressed"]
